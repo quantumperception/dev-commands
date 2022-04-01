@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using UnityEngine;
 
 namespace DevCommands
@@ -20,34 +18,7 @@ namespace DevCommands
         {
             public ZRpc rpc;
         }
-        public static IEnumerator AddIdToWhitelist_Server(long sender, ZPackage pkg)
-        {
-            DevCommands.whitelist = File.ReadAllLines(DevCommands.whitelistPath).ToList();
-            Jotunn.Logger.LogInfo(sender);
-            ZNetPeer peer = ZNet.instance.GetPeer(sender);
-            List<string> idsToAdd = new List<string>();
-            for (int i = 0; i < pkg.ReadInt(); i++)
-            {
-                idsToAdd.Add(pkg.ReadString());
-                yield return new WaitForSeconds(1f);
-            }
-            DevCommands.whitelist.AddRange(idsToAdd);
-            File.WriteAllLines(DevCommands.whitelistPath, DevCommands.whitelist);
-            ZPackage resPkg = new ZPackage();
-            resPkg.Write(1);
-            resPkg.Write($"Usuario {sender} añadido correctamente a la whitelist.");
-            DevCommands.AddIdToWhitelist_RPC.SendPackage(peer.m_uid, resPkg);
-        }
-        public static IEnumerator AddIdToWhitelist_Client(long sender, ZPackage pkg)
-        {
-            yield return null;
-            int msgCount = pkg.ReadInt();
-            for (int i = 0; i < msgCount; i++)
-            {
-                Console.instance.Print(pkg.ReadString());
-                yield return new WaitForSeconds(0.5f);
-            }
-        }
+
         public static void Broadcast(string text, string username = ModInfo.Title)
         {
             ZRoutedRpc.instance.InvokeRoutedRPC(ZRoutedRpc.Everybody, "ChatMessage", new object[]

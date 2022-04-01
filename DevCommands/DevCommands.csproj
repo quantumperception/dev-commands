@@ -241,8 +241,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BepInExPlugin.cs" />
+    <Compile Include="Client.cs" />
     <Compile Include="ModInfo.cs" />
-    <Compile Include="SandalonePatches.cs" />
+    <Compile Include="Server.cs" />
     <Compile Include="Util.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
