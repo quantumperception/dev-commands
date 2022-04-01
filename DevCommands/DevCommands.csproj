@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <LangVersion>8.0</LangVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6594E8C4-D55B-49C7-BCFD-C9C5FC4B30B7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DevCommands</RootNamespace>
+    <AssemblyName>DevCommands</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="assembly_steamworks, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Desktop\ValheimRP\valheim_Data\Managed\assembly_steamworks.dll</HintPath>
+    </Reference>
+    <Reference Include="assembly_utils, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Desktop\ValheimRP\valheim_Data\Managed\assembly_utils.dll</HintPath>
+    </Reference>
+    <Reference Include="assembly_valheim">
+      <HintPath>..\..\..\..\Desktop\ValheimRP\valheim_Data\Managed\assembly_valheim.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\BepInEx.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Harmony">
+      <HintPath>D:\Program Files\Steam\steamapps\common\Valheim\BepInEx\core\BepInEx.Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Jotunn">
+      <HintPath>..\..\..\..\Desktop\ValheimRP\BepInEx\plugins\Jotun\Jotunn.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.RuntimeDetour">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\MonoMod.RuntimeDetour.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.Utils">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\MonoMod.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="MonsterLoader">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\MonsterLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.AndroidJNIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.DSPGraphModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.LocalizationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.StreamingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.SubsystemsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.TextCoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>D:\Backup\User\source\repos\QPFoodMining\CivheimFoodMining\bin\Debug\UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BepInExPlugin.cs" />
+    <Compile Include="ModInfo.cs" />
+    <Compile Include="SandalonePatches.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
