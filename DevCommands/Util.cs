@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 namespace DevCommands
 {
@@ -38,6 +39,10 @@ namespace DevCommands
                 username,
                 text
             });
+        }
+        public static bool isServer()
+        {
+            return SystemInfo.graphicsDeviceType == GraphicsDeviceType.Null;
         }
 #nullable enable
         internal static string? readLocalSteamID() =>

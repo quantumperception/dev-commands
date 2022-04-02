@@ -48,7 +48,7 @@ namespace DevCommands
         {
             private static void Prefix()
             {
-                if (ZNet.instance.IsServer())
+                if (Util.isServer())
                 {
                     ZRoutedRpc.instance.Register("Request_AddIdToWhitelist",
                         new Action<long, ZPackage>(Server.RPC_RequestAddIdToWhitelist)); // Our Server Handler
@@ -65,7 +65,7 @@ namespace DevCommands
         {
             private static void Prefix()
             {
-                if (!ZNet.instance.IsServer())
+                if (!Util.isServer())
                 {
                     ZRoutedRpc.instance.Register("Request_AddIdToWhitelist",
                         new Action<long, ZPackage>(Client.RPC_RequestAddIdToWhitelist)); // Our Mock Server Handler
